@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated {
+  animation-fill-mode: both;
+}
+
+@keyframes backAndForth {
+  from {
+    left: 0%;
+    width: 50%;
+  }
+
+  to {
+    left: 50%;
+    width: 50%;
+  }
+}
+
+.loading-bar {
+  position: absolute;
+  height: 5px;
+  background-color: #2f80ed;
+  animation-duration: 1s;
+  animation-name: backAndForth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  border-radius: 8px;
+}
+
+.dropArea {
+  height: 218px;
+  border: 1px dashed #97bef4;
+  box-sizing: border-box;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: #f6f8fb;
+}
+
+.dropArea.highlight {
+  border-width: 2px;
+}
